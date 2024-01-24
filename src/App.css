@@ -16,10 +16,15 @@
         & input {
            width: 200px;
            height: 40px;
-           border: 1px solid #5db9ff;
+           border: transparent;
            border-radius: 10px; 
            font-size: 18px;
            padding-left: 10px;
+           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2) ;
+
+           &:focus{
+            outline: none;
+           }
         }
 
         & button {
@@ -53,7 +58,7 @@ body{
     align-items: center;
     text-align: center;
     padding: 2rem;
-
+    
     & h1{
         text-decoration: underline;
     }

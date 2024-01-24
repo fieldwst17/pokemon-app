@@ -16,6 +16,8 @@ function App() {
   });
 
   const searchPokemon = () => {
+    const formattedPokemonName = pokemonName.toLowerCase();
+
     axios
       .get(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
       .then((response) => {
@@ -52,9 +54,9 @@ function App() {
 
       <div className="DisplaySection">
         {!pokemonChosen ? (
-          <h1>Please choose a Pokemon</h1>
+          <h1>Search your Pokemon</h1>
         ) : (
-          <div>
+          <div className="card">
             <h1>{pokemon.name}</h1>
             <img src={pokemon.img} alt={pokemon.name} />
             <h3>Species: {pokemon.species}</h3>
